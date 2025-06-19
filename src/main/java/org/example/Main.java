@@ -1,10 +1,18 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import view.ViewApp;
+
+import javax.swing.*;
+
+import controller.ControllerApp;
+import model.ModelApp;
+import view.ViewApp;
+
 public class Main {
     public static void main(String[] args) {
-
-
+        ModelApp model = new ModelApp();
+        ViewApp view = new ViewApp();
+        new ControllerApp(model, view);
+        view.setVisible(true);
     }
 }
